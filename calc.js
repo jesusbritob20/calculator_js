@@ -5,7 +5,7 @@ const btnSuma = document.getElementById("btn_sumar");
 const btnResta = document.getElementById("btn_restar");
 const btnMultiplicar = document.getElementById("btn_multiplicar");
 const btnDividir = document.getElementById("btn_dividir");
-const resultado = document.getElementById("result");
+const btnResultado = document.getElementById("result");
 const btnNum0 = document.getElementById("num0");
 const btnNum1 = document.getElementById("num1");
 const btnNum2 = document.getElementById("num2");
@@ -127,33 +127,29 @@ btnDividir.addEventListener("click", () => {
   inhabilitarBotones();
 });
 
-resultado.addEventListener("click", () => {
-  let r = 0;
+btnResultado.addEventListener("click", () => {
+  let resultado = 0;
   let cantidades = [];
   switch (operador) {
     case "+":
       cantidades = cantidadHaEvaluar1.split(operador);
-      r = parseFloat(cantidades[0]) + parseFloat(cantidades[1]);
-      visor.innerHTML = r;
-      console.log(r);
+      resultado = parseFloat(cantidades[0]) + parseFloat(cantidades[1]);
+      visor.innerHTML = resultado;
       break;
     case "-":
       cantidades = cantidadHaEvaluar1.split(operador);
-      r = parseFloat(cantidades[0]) - parseFloat(cantidades[1]);
-      visor.innerHTML = r;
-      console.log(r);
+      resultado = parseFloat(cantidades[0]) - parseFloat(cantidades[1]);
+      visor.innerHTML = resultado;
       break;
     case "*":
       cantidades = cantidadHaEvaluar1.split(operador);
-      r = parseFloat(cantidades[0]) * parseFloat(cantidades[1]);
-      visor.innerHTML = r;
-      console.log(r);
+      resultado = parseFloat(cantidades[0]) * parseFloat(cantidades[1]);
+      visor.innerHTML = resultado;
       break;
     case "/":
       cantidades = cantidadHaEvaluar1.split(operador);
-      r = parseFloat(cantidades[0]) / parseFloat(cantidades[1]);
-      visor.innerHTML = r;
-      console.log(r);
+      resultado = parseFloat(cantidades[0]) / parseFloat(cantidades[1]);
+      visor.innerHTML = resultado;
       break;
     default:
       alert("Debe selecionar un operador para realizar su calculo");
